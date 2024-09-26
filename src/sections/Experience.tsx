@@ -24,7 +24,7 @@ const WorkExperience = () => {
                             <OrbitControls enableZoom={false} maxPolarAngle={Math.PI / 2}/>
 
                             <Suspense fallback={<CanvasLoader/>}>
-                                <Developer position-y={-2.5} scale={3} animationName={animationName}/>
+                                <Developer positionY={-2.5} scale={3} animationName={animationName}/>
                             </Suspense>
                         </Canvas>
                     </div>
@@ -53,7 +53,6 @@ const WorkExperience = () => {
                                         </p>
                                         <p className="group-hover:text-white transition-all ease-in-out duration-500">{item.description}</p>
                                         <ImageToolTip item={item.tech}/>
-
                                     </div>
                                 </div>
                             ))}

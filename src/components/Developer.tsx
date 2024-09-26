@@ -1,32 +1,37 @@
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
 import {useAnimations, useFBX, useGLTF} from '@react-three/drei'
-import {GroupProps} from "@react-three/fiber";
 import {useEffect, useRef} from "react";
 import {renameTracks} from "../../utils/functions.tsx";
 
-const Developer = ({animationName = 'idle', ...props}: { animationName?: string, props: GroupProps }) => {
+const Developer = ({animationName = 'idle', scale,positionY}: { animationName?: string,scale:number,positionY:number }) => {
     const group = useRef(null)
     const {nodes, materials} = useGLTF('/models/animations/avatar.glb')
 
     const {animations: idleAnimation} = useFBX('/models/animations/idle.fbx')
-    const {animations: saluteAnimation} = useFBX('/models/animations/salute.fbx')
+    // const {animations: saluteAnimation} = useFBX('/models/animations/salute.fbx')
     const {animations: sittingAnimation} = useFBX('/models/animations/sitting.fbx')
     const {animations: standAnimation} = useFBX('/models/animations/stand.fbx')
-    const {animations: clappingAnimation} = useFBX('/models/animations/clapping.fbx')
-    const {animations: victoryAnimation} = useFBX('/models/animations/victory.fbx')
+    // const {animations: clappingAnimation} = useFBX('/models/animations/clapping.fbx')
+    // const {animations: victoryAnimation} = useFBX('/models/animations/victory.fbx')
 
     renameTracks(sittingAnimation[0]);
     renameTracks(standAnimation[0]);
     renameTracks(idleAnimation[0]);
 
     idleAnimation[0].name = 'idle';
-    saluteAnimation[0].name = 'salute';
-    clappingAnimation[0].name = 'clapping';
-    victoryAnimation[0].name = 'victory';
+    // saluteAnimation[0].name = 'salute';
+    // clappingAnimation[0].name = 'clapping';
+    // victoryAnimation[0].name = 'victory';
     sittingAnimation[0].name = 'sitting';
     standAnimation[0].name = 'stand';
 
     const {actions} = useAnimations(
-        [idleAnimation[0], saluteAnimation[0], clappingAnimation[0], victoryAnimation[0], sittingAnimation[0], standAnimation[0]],
+        [idleAnimation[0],
+            // saluteAnimation[0],
+            // clappingAnimation[0],
+            // victoryAnimation[0],
+            sittingAnimation[0], standAnimation[0]],
         group,
     );
 
@@ -36,7 +41,7 @@ const Developer = ({animationName = 'idle', ...props}: { animationName?: string,
     }, [animationName]);
 
     return (
-        <group ref={group} {...props} dispose={null}>
+        <group ref={group} position-y={positionY} scale={scale} dispose={null}>
             <primitive object={nodes.Hips}/>
             <skinnedMesh
                 name="EyeLeft"

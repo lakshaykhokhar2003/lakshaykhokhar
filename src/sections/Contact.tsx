@@ -26,8 +26,9 @@ const Contact = () => {
     };
 
 
+
     return (
-        <section className="c-space my-20">
+        <section className="c-space my-20" id="contact">
             <div className="relative min-h-screen flex items-center justify-center flex-col">
                 <img src="/assets/terminal.png" alt="terminal" className="absolute  min-h-screen"/>
                 <div className="contact-container">
@@ -41,8 +42,8 @@ const Contact = () => {
                         {formFields.map((field, index) => (
                             <div key={index}>
                                 {renderInput(field, register, errors)}
-                                {errors[field.register] &&
-                                    <p className="text-red-500 mt-2">{errors[field.register].message}</p>}
+                                {/*// @ts-expect-error props error */}
+                                {errors[field.register] && <p className="text-red-500 mt-2">{errors[field.register].message}</p>}
                             </div>
                         ))}
 
