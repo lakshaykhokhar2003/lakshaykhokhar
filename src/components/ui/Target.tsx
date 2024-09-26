@@ -2,7 +2,7 @@ import {useGLTF} from "@react-three/drei";
 import {useRef} from "react";
 import {useGSAP} from "@gsap/react";
 import gsap from "gsap";
-import {ExtendedMesh} from "../../utils/types.ts";
+import {ExtendedMesh} from "../../../utils/types.ts";
 import {BufferGeometry, Material, Mesh} from "three";
 
 const Target = (props: ExtendedMesh) => {

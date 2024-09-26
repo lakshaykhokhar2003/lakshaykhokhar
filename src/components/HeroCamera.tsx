@@ -1,3 +1,5 @@
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
 import React, {useRef} from 'react'
 import {useFrame} from "@react-three/fiber";
 import {easing} from "maath";

@@ -1,14 +1,13 @@
 import gsap from 'gsap';
+import {myProjects} from "../constants";
 import {useGSAP} from '@gsap/react';
-import {Suspense, useState} from 'react';
+import {lazy, Suspense, useState} from 'react';
 import {Canvas} from '@react-three/fiber';
 import {Center, OrbitControls} from '@react-three/drei';
-
-import DemoComputer from '../components/DemoComputer.jsx';
 import CanvasLoader from "../components/CanvasLoader.tsx";
-import {myProjects} from "../constants";
-import ImageToolTip from "../components/ImageToolTip.tsx";
 
+const DemoComputer = lazy(() => import('../components/DemoComputer.tsx'));
+const ImageToolTip = lazy(() => import('../components/ImageToolTip.tsx'));
 const projectCount = myProjects.length;
 
 const Projects = () => {
@@ -32,7 +31,7 @@ const Projects = () => {
 
     return (
         <section className="c-space my-20">
-            <p className="head-text">My Selected Work</p>
+            <p className="head-text">My Projects</p>
 
             <div className="grid lg:grid-cols-2 grid-cols-1 mt-12 gap-5 w-full">
                 <div className="flex flex-col gap-5 relative sm:p-10 py-10 px-5 shadow-2xl shadow-black-200">
@@ -52,7 +51,7 @@ const Projects = () => {
                         <p className="animatedText">{currentProject.subdesc}</p>
                     </div>
 
-                    <div className="flex items-center justify-between flex-wrap gap-5">
+                    <div className="flex items-center justify-between flex-wrap gap-5 z-10">
                         {/*<div className="flex items-center gap-3">*/}
                         {/*    {currentProject.tags.map((tag, index) => (*/}
                         {/*        <div key={index} className="relative group tech-logo">*/}
@@ -76,7 +75,7 @@ const Projects = () => {
                         </a>
                     </div>
 
-                    <div className="flex justify-between items-center mt-7">
+                    <div className="flex justify-between items-center mt-7 z-10">
                         <button className="arrow-btn" onClick={() => handleNavigation('previous')}>
                             <img src="/assets/left-arrow.png" alt="left arrow"/>
                         </button>
@@ -101,7 +100,7 @@ const Projects = () => {
                                 {/*</group>*/}
                             </Suspense>
                         </Center>
-                        <OrbitControls maxPolarAngle={Math.PI / 2} enableZoom={true}/>
+                        <OrbitControls maxPolarAngle={Math.PI / 2} enableZoom={false}/>
                     </Canvas>
                 </div>
             </div>

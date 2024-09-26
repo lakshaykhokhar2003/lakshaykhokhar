@@ -1,5 +1,7 @@
 import {formFieldsProps} from "./types";
 import {AnimationClip} from "three";
+import {ClassValue, clsx} from "clsx";
+import {twMerge} from "tailwind-merge";
 
 export const renderInput = (field: formFieldsProps, register: any, errors:  any) => {
     switch (field.type) {
@@ -32,3 +34,43 @@ export const renameTracks = (animation: AnimationClip) => {
         track.name = track.name.replace('mixamorig', '');
     });
 };
+
+export function cn(...inputs: ClassValue[]) {
+    return twMerge(clsx(inputs))
+}
+
+export const slugs = [
+    "react",
+    "nextdotjs",
+    "nodedotjs",
+    "mongodb",
+    "mysql",
+    "postgresql",
+    "express",
+    "prisma",
+    "twilio",
+    "clerk",
+    "cloudinary",
+    "appwrite",
+    "firebase",
+    "reactquery",
+    "amazonaws",
+    "threedotjs",
+    "tailwindcss",
+    "framer",
+    "zod",
+    "reacthookform",
+    "shadcnui",
+    "mui",
+    "bootstrap",
+    "redux",
+    "vercel",
+    "git",
+    "github",
+    "webstorm",
+    // "figma",
+    "typescript",
+    "javascript",
+    "html5",
+    "css3",
+]
