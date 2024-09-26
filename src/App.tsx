@@ -32,7 +32,7 @@ const App = () => {
         <>
             {/*<Suspense*/}
             {/*    fallback={<div className={"w-full h-full absolute inset-0 bg-white"}>sTARS...</div>}>*/}
-            <main className="max-w-7xl mx-auto relative z-1000">
+            <main className="max-w-7xl mx-auto relative z-[10000]">
 
                 <Navbar/>
                 <Hero/>
