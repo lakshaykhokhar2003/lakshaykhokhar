@@ -15,7 +15,8 @@ const World = () => {
                 lng: +lng,
                 pop: +pop
             })))
-            .then(setPopData);
+            .then(setPopData)
+        .then(res => console.log(res));
     }, []);
 
     useEffect(() => {
