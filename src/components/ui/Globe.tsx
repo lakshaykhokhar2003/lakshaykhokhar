@@ -2,14 +2,14 @@
 // @ts-nocheck
 import {useEffect, useRef, useState} from 'react';
 import Globe from 'react-globe.gl';
-// import * as d3 from 'd3';
+import * as d3 from 'd3';
 
 const World = () => {
     const globeEl = useRef();
     const [popData, setPopData] = useState([]);
 
     useEffect(() => {
-        fetch('../../utils/world_population.csv').then(res => res.text())
+        fetch('/assets/world_population.csv').then(res => res.text())
             .then(csv => d3.csvParse(csv, ({lat, lng, pop}: { lat: number, lng: number, pop: number }) => ({
                 lat: +lat,
                 lng: +lng,
