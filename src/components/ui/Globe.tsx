@@ -2,7 +2,7 @@
 // @ts-nocheck
 import {useEffect, useRef, useState} from 'react';
 import Globe from 'react-globe.gl';
-import * as d3 from 'd3';
+// import * as d3 from 'd3';
 
 const World = () => {
     const globeEl = useRef();
@@ -16,7 +16,6 @@ const World = () => {
                 pop: +pop
             })))
             .then(setPopData)
-        .then(res => console.log(res));
     }, []);
 
     useEffect(() => {
