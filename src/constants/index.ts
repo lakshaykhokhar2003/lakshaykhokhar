@@ -30,7 +30,7 @@ export const myProjects: Projects[] = [
         desc: 'An innovative healthcare platform designed to streamline essential medical processes. It simplifies patient registration, appointment scheduling, and medical record management, providing a seamless experience for both healthcare providers and patients.',
         subdesc:
             'With a focus on efficiency, CarePulse integrantes complex forms and SMS notifications, by using Next.js, Appwrite, Twillio and Sentry that enhance operational workflows.',
-        href: 'https://www.youtube.com/watch?v=lEflo_sc82g',
+        href: 'https://healthcare-self.vercel.app/',
         texture: '/textures/project/project1.mp4',
         // logoStyle: {
         //     backgroundColor: '#60f5a1',
