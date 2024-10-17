@@ -4,6 +4,7 @@ import {renderInput} from "../../utils/functions.tsx";
 import {formFields, privateKey, publicKey, receiverEmail, receiverName, templateId} from "../constants";
 import {FormData, formSchema} from "../../utils/types.ts";
 import emailjs from '@emailjs/browser';
+import {toast} from "sonner";
 
 const Contact = () => {
     const {register, handleSubmit, formState: {errors, isSubmitting}, reset} = useForm<FormData>({
@@ -19,9 +20,10 @@ const Contact = () => {
                 to_email: receiverEmail,
                 message: data.message + " Message from: " + data.email
             },publicKey)
+            toast.success('Message sent successfully');
             reset();
-        } catch (e) {
-            console.log(e)
+        } catch {
+            toast.error('An error occurred, please try again later or contact me directly at my email address');
         }
     };
 

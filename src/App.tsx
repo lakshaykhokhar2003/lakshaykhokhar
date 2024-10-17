@@ -2,6 +2,7 @@ import {lazy} from "react";
 import StarsBackground from "./components/ui/StarBackground.tsx";
 import ShootingStars from "./components/ui/ShootingStars.tsx";
 import Hero from "./sections/Hero.tsx";
+import {Toaster} from "sonner";
 
 const Navbar = lazy(() => import("./sections/Navbar.tsx"));
 // const Hero = lazy(() => import("./sections/Hero.tsx"));
@@ -48,7 +49,7 @@ const App = () => {
 
             {/*</Suspense>*/}
             {/*<BackgroundBeams/>*/}
-
+            <Toaster richColors closeButton duration={5000} theme="light"/>
         </>
     )
 }
