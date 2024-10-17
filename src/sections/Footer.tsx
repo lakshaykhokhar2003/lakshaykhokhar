@@ -10,7 +10,8 @@ const Footer = () => {
                 <a href="https://github.com/lakshaykhokhar2003" className="social-icon"><img src="/assets/github.svg"
                                                                                              alt="github"
                                                                                              className="w-1/2 h-1/2"/></a>
-                <a href="" className="social-icon"><img src="/assets/twitter.svg" alt="github" className="w-1/2 h-1/2"/></a>
+                <a href="https://www.linkedin.com/in/lakshay-khokhar-a5242212a" className="social-icon"><img
+                    src="/assets/linkedin.svg" alt="linkedin" className="w-1/2 h-1/2 "/></a>
                 <a href="https://www.instagram.com/lakshay__khokhar/" className="social-icon"><img
                     src="/assets/instagram.svg" alt="github" className="w-1/2 h-1/2"/></a>
             </div>
