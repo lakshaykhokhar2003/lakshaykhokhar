@@ -14,7 +14,7 @@ const About = () => {
         }, 2000);
     }
 
-    const downloadResume = () => window.open('/assets/LakshayResume.pdf');
+    const viewResume = () => window.open('/assets/LakshayResume.pdf');
 
     return (
         <section className="c-space my-20" id="about">
@@ -72,9 +72,9 @@ const About = () => {
                         <div>
                             <p className="grid-headtext">My Resume</p>
                             <p className="grid-subtext">
-                                You can download my resume to learn more about my experience, skills, and projects.
+                                To find out more about my background, abilities, and projects, you can look at my resume.
                             </p>
-                            <Button name={"Download Resume"} containerClass="w-full mt-10" onClick={downloadResume}/>
+                            <Button name={"View Resume"} containerClass="w-full mt-10" onClick={viewResume}/>
                         </div>
 
                     </div>
