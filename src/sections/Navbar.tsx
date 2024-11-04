@@ -7,7 +7,9 @@ const NavItems = () => {
         <ul className="nav-ul">
             {navLinks.map(({ id, href, name }: NavLinks) => (
                 <li key={id} className="nav-li">
-                    <a href={href} className="nav-li_a">{name}</a>
+                    <a href={href} className="nav-li_a" {...(id === 5 && {target: '_blank'})}>
+                        {name}
+                    </a>
                 </li>
             ))}
         </ul>

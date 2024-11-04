@@ -21,6 +21,11 @@ export const navLinks: NavLinks[] = [
         name: 'Contact',
         href: '#contact',
     },
+    {
+        id:5,
+        name:'Resume',
+        href:"/assets/LakshayResume.pdf"
+    }
 ];
 
 
