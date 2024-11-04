@@ -66,3 +66,9 @@ export const formSchema = z.object({
     message: z.string().min(1, "Message is required"),
 });
 export type FormData = z.infer<typeof formSchema>;
+
+export interface socialProps {
+    name: string;
+    icon: string;
+    link:string;
+}

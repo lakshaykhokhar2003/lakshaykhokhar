@@ -1,4 +1,4 @@
-import {formFieldsProps} from "./types";
+import {formFieldsProps, socialProps} from "./types";
 import {AnimationClip} from "three";
 import {ClassValue, clsx} from "clsx";
 import {twMerge} from "tailwind-merge";
@@ -39,7 +39,7 @@ export function cn(...inputs: ClassValue[]) {
     return twMerge(clsx(inputs))
 }
 
-export const slugs = [
+export const slugs:string[] = [
     "react",
     "nextdotjs",
     "nodedotjs",
@@ -74,3 +74,18 @@ export const slugs = [
     "html5",
     "css3",
 ]
+
+export const socials:socialProps[]= [
+    {
+        name: "Github",
+        icon: "/assets/github.svg",
+        link: "https://github.com/lakshaykhokhar2003",
+    },{
+        name: "LinkedIn",
+        icon: "/assets/linkedin.svg",
+        link: "https://www.linkedin.com/in/lakshay-khokhar-a5242212a",
+    },{
+        name: "Instagram",
+        icon: "/assets/instagram.svg",
+        link: "https://www.instagram.com/lakshay__khokhar/",
+    }]

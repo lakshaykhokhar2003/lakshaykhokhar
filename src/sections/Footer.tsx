@@ -1,3 +1,5 @@
+import {socials} from "../../utils/functions.tsx";
+
 const Footer = () => {
     return (
         <section
@@ -7,15 +9,16 @@ const Footer = () => {
             </div>
 
             <div className="flex gap-3">
-                <a href="https://github.com/lakshaykhokhar2003" className="social-icon"><img src="/assets/github.svg"
-                                                                                             alt="github"
-                                                                                             className="w-1/2 h-1/2"/></a>
-                <a href="https://www.linkedin.com/in/lakshay-khokhar-a5242212a" className="social-icon"><img
-                    src="/assets/linkedin.svg" alt="linkedin" className="w-1/2 h-1/2 "/></a>
-                <a href="https://www.instagram.com/lakshay__khokhar/" className="social-icon"><img
-                    src="/assets/instagram.svg" alt="github" className="w-1/2 h-1/2"/></a>
+                {socials.map((social, index) => (
+                    <a href={social.link} key={index} className="social-icon">
+                        <img src={social.icon} alt={social.name} className="w-1/2 h-1/2"/>
+                    </a>
+                ))}
+
             </div>
-            <p className="text-white-500">Designed by <span className="text-white-600">Lakshay Khokhar</span></p>
+            <p className="text-white-500 max-sm:text-center max-sm:w-full">Designed by <span className="text-white-600">
+                Lakshay Khokhar
+            </span></p>
         </section>
     )
 }
