@@ -19,7 +19,7 @@ body {
   }
 
   .head-text {
-    @apply sm:text-4xl text-3xl font-semibold text-gray_gradient;
+    @apply sm:text-4xl text-xl font-semibold text-gray_gradient;
   }
 
   .nav-ul {
@@ -101,11 +101,11 @@ body {
 
   /*  work experience section */
   .work-container {
-    @apply grid lg:grid-cols-3 grid-cols-1 gap-5 mt-12;
+    @apply grid lg:grid-cols-3 grid-cols-1 gap-5 mt-12 relative;
   }
 
   .work-canvas {
-    @apply col-span-1 rounded-lg bg-black-200 border border-black-300;
+    @apply col-span-1 rounded-lg bg-black-200 border border-black-300 w-full relative;
   }
 
   .work-content {

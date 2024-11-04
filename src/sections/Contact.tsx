@@ -35,7 +35,7 @@ const Contact = () => {
                 <img src="/assets/terminal.png" alt="terminal" className="absolute  min-h-screen"/>
                 <div className="contact-container">
                     <h3 className="head-text">Lets Talk</h3>
-                    <p className="text-lg text-white-600 mt-3">
+                    <p className="sm:text-lg text-sm text-white-600 mt-3">
                         Whether you’re looking to build a new website, improve
                         your existing platform, or bring a unique project to life, I’m here to help.
                     </p>
@@ -45,7 +45,7 @@ const Contact = () => {
                             <div key={index}>
                                 {renderInput(field, register, errors)}
                                 {/*// @ts-expect-error props error */}
-                                {errors[field.register] && <p className="text-red-500 mt-2">{errors[field.register].message}</p>}
+                                    {errors[field.register] && <p className="text-red-500 mt-2">{errors[field.register].message}</p>}
                             </div>
                         ))}
 
