@@ -40,7 +40,7 @@ const Contact = () => {
                         your existing platform, or bring a unique project to life, I’m here to help.
                     </p>
 
-                    <form onSubmit={handleSubmit(onSubmit)} className="mt-12 flex flex-col space-y-7" noValidate>
+                    <form onSubmit={handleSubmit(onSubmit)} className="mt-4 flex flex-col space-y-2 sm:space-y-7 sm:mt-12" noValidate>
                         {formFields.map((field, index) => (
                             <div key={index}>
                                 {renderInput(field, register, errors)}
