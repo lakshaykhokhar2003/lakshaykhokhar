@@ -1,14 +1,17 @@
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-nocheck
 import {useEffect, useRef, useState} from 'react';
+import {useUtils} from "../../../utils/functions.tsx";
 import Globe from 'react-globe.gl';
 import * as d3 from 'd3';
 
 const World = () => {
     const globeEl = useRef();
+    const {isMobile} = useUtils()
     const [popData, setPopData] = useState([]);
 
     useEffect(() => {
+        if(isMobile) return;
         fetch('/assets/world_population.csv').then(res => res.text())
             .then(csv => d3.csvParse(csv, ({lat, lng, pop}: { lat: number, lng: number, pop: number }) => ({
                 lat: +lat,
@@ -16,6 +19,8 @@ const World = () => {
                 pop: +pop
             })))
             .then(setPopData)
+
+        return () => setPopData([]);
     }, []);
 
     useEffect(() => {

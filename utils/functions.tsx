@@ -2,6 +2,7 @@ import {formFieldsProps, socialProps} from "./types";
 import {AnimationClip} from "three";
 import {ClassValue, clsx} from "clsx";
 import {twMerge} from "tailwind-merge";
+import {useMediaQuery} from "react-responsive";
 
 export const renderInput = (field: formFieldsProps, register: any, errors:  any) => {
     switch (field.type) {
@@ -89,3 +90,8 @@ export const socials:socialProps[]= [
         icon: "/assets/instagram.svg",
         link: "https://www.instagram.com/lakshay__khokhar/",
     }]
+
+export const useUtils = () => {
+    const isMobile = useMediaQuery({maxWidth: 768});
+    return {isMobile}
+}
