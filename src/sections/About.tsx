@@ -1,4 +1,3 @@
-// import Globe from "react-globe.gl";
 import World from "../components/ui/Globe.tsx";
 import Button from "../components/ui/Button.tsx";
 import {useState} from "react";
@@ -14,6 +13,9 @@ const About = () => {
             setHasCopied(false);
         }, 2000);
     }
+
+    const downloadResume = () => window.open('/assets/LakshayResume.pdf');
+
     return (
         <section className="c-space my-20" id="about">
             <div className="grid xl:grid-cols-3 xl:grid-rows-6 md:grid-cols-2 grid-cols-1 gap-5 h-full">
@@ -52,22 +54,6 @@ const About = () => {
                     <div className="grid-container">
                         <div
                             className="rounded-3xl w-full sm:h-[326px] h-fit flex justify-center items-center overflow-hidden object-contain">
-                            {/*<Globe*/}
-                            {/*    height={326}*/}
-                            {/*    width={326}*/}
-                            {/*    backgroundColor="rgba(0, 0, 0, 0)"*/}
-                            {/*    showAtmosphere*/}
-                            {/*    showGraticules*/}
-                            {/*    globeImageUrl="//unpkg.com/three-globe/example/img/earth-night.jpg"*/}
-                            {/*    bumpImageUrl="//unpkg.com/three-globe/example/img/earth-topology.png"*/}
-                            {/*    labelsData={[{*/}
-                            {/*        lat: 18.913,*/}
-                            {/*        lng: 73.7389,*/}
-                            {/*        text: 'Pune, India',*/}
-                            {/*        color: 'white',*/}
-                            {/*        size: 15*/}
-                            {/*    }]}*/}
-                            {/*/>*/}
                             <World/>
                         </div>
                         <div>
@@ -82,13 +68,15 @@ const About = () => {
                 </div>
                 <div className="xl:col-span-2 xl:row-span-3">
                     <div className="grid-container">
-                        <img src="/assets/grid3.png" alt="grid-3" className="w-full sm:h-[266px] h-fit object-contain"/>
+                        <img src="/assets/resume.jpg" alt="grid-3" className="w-full sm:h-[266px] h-fit object-contain"/>
                         <div>
-                            <p className="grid-headtext">Why work with me?</p>
-                            <p className="grid-subtext">I am a self-taught developer who is always eager to learn new
-                                technologies and frameworks. I am passionate about building products that are both
-                                visually stunning and highly functional.</p>
+                            <p className="grid-headtext">My Resume</p>
+                            <p className="grid-subtext">
+                                You can download my resume to learn more about my experience, skills, and projects.
+                            </p>
+                            <Button name={"Download Resume"} containerClass="w-full mt-10" onClick={downloadResume}/>
                         </div>
+
                     </div>
                 </div>
 
