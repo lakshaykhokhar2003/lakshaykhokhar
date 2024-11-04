@@ -8,7 +8,7 @@ const Footer = () => {
                 <p>© 2024 All rights reserved</p>
             </div>
 
-            <div className="flex gap-3">
+            <div className="flex gap-1 sm:gap-3">
                 {socials.map((social, index) => (
                     <a href={social.link} key={index} className="social-icon">
                         <img src={social.icon} alt={social.name} className="w-1/2 h-1/2"/>
@@ -16,7 +16,7 @@ const Footer = () => {
                 ))}
 
             </div>
-            <p className="text-white-500 max-sm:text-center max-sm:w-full">Designed by <span className="text-white-600">
+            <p className="text-white-500">Designed by <span className="text-white-600">
                 Lakshay Khokhar
             </span></p>
         </section>
