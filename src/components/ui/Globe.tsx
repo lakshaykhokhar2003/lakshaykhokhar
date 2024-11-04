@@ -21,7 +21,7 @@ const World = () => {
             .then(setPopData)
 
         return () => setPopData([]);
-    }, []);
+    }, [isMobile]);
 
     useEffect(() => {
         globeEl.current.controls().autoRotate = true;
