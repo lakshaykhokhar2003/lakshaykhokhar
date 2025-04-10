@@ -29,7 +29,55 @@ export const navLinks: NavLinks[] = [
 ];
 
 
-export const myProjects: Projects[] = [
+export const myProjects: Projects[] = [{
+    title:'StayHere - A Vacation Rental Platform',
+    desc:'StayHere is a dynamic vacation rental platform that offers real-time booking, secure payments, and an intuitive interface for both travelers and hosts. Users can easily browse listings, manage bookings, and upload property images.',
+    subdesc:'The platform includes a custom dashboard for property management and leverages email notifications to keep users informed, delivering a seamless and responsive rental experience from start to finish.',
+    href:'https://lakshay-vacation-rental.vercel.app/',
+    texture:'/textures/project/project5.mp4',
+    spotlight:'/assets/spotlight5.png',
+    tags:[
+        {
+            id:1,
+            name:'Next.js',
+            path:'/assets/next.svg',
+        }, {
+            id: 2,
+            name: 'React.js',
+            path: '/assets/react.svg',
+        }, {
+            id: 3,
+            name: 'Stripe',
+            path: '/assets/stripe.svg',
+        }, {
+            id: 4,
+            name: 'UploadThing',
+            path: '/assets/uploadthing.png',
+        }, {
+            id: 5,
+            name: 'Resend',
+            path: '/assets/resend.png',
+        }, {
+            id: 6,
+            name: 'Firebase',
+            path: '/assets/firebase.png',
+        },{
+            id: 7,
+            name: 'Framer Motion',
+            path: '/assets/framer.png',
+        },
+        {
+            id: 8,
+            name: 'TailwindCSS',
+            path: 'assets/tailwindcss.png',
+        },
+        {
+            id: 9,
+            name: 'TypeScript',
+            path: '/assets/typescript.png',
+        },
+    ]
+},
     {
         title: 'CarePulse - Health Management System',
         desc: 'An innovative healthcare platform designed to streamline essential medical processes. It simplifies patient registration, appointment scheduling, and medical record management, providing a seamless experience for both healthcare providers and patients.',
